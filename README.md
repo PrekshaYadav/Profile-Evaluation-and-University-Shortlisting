@@ -27,19 +27,26 @@ The Key feature of the project is that instead of referring to multiple websites
 
 ## Steps to be followed:
 1. Clone the project
-2. Execute MainExecutionFile.py: this file will execute the below files
+2. Create a database - CREATE DATABASE FinalProject
+3. Execute MainExecutionFile.py: this file will execute the below files
     1. Connector.py
     2. Importing_Dataset.py
     3. YMGrad_Scraper.py
     4. Visualization.py
     5. Prediction_model.py
-    6. app.py
-3.  Execute the following command in the terminal
+4. Execute commands from finalproject.sql to create views, indexes, triggers and procedures
+5. Execute studentlogin.sql to create Logindetails and Student table
+6. Execute the following command in the terminal
     python./app.py
-4. In the retrieved output click on "http://localhost:8080"
-5. Register in the website using your email id
-6. Login to the page 
-7. Filter the universities based on your profile by giving GRE Score, TOEFL Score and CGPA
-8. You can also search the university by giving the university name in the search box.
+7. In the retrieved output click on "http://localhost:8080"
+8. Register in the website using your email id
+9. Log into the page 
+10. Filter the universities based on your profile by giving GRE Score, TOEFL Score and CGPA
+11. You can also search the university by giving the university name in the search box.
 
 
+
+## Documentation files:
+1. Summary.md - this file has the summary of this entire project and the screenshots of all the outputs
+2. Diagram.md - this file has ER diagram and UML diagram to get a better understanding of the project
+3. Usecases.md - this file has the use cases and the screenshots of their output
