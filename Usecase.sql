@@ -1,8 +1,11 @@
-Use assignment3;
+Use FinalProject;
 
 Select * from Standards;
 Select * from Requirements;
 Select * from University;
+Select * from Student_profile;
+Select * from Student;
+Select * from logindetails;
 
 1. Top 5 USA universities.
 Select University_name from University
@@ -91,6 +94,20 @@ on University.university_id = Standards.university_id;
 Select University_name, min(score) from University left join requirements
 on University.University_ID = Requirements.University_ID
 where academic_year = '2012'
+
+16. View the student name, contact_number and mail address who has Gre=310 and Toefl=99.
+Select Name, Contact_Number, Email_ID
+from student_profile
+where GRE_Score = '310' AND TOEFL_Score = '99';
+
+17.Show the student details and graduation year of students who has cgpa>8.
+Select * from student_profile
+where cgpa > '8';
+
+18.check for name, mail, GRE, cgpa, and Toefl score of students with age<26.
+Select * from student_profile
+where age< '26';
+
 
 Previous use cases:
 -----Shreyasi-----
