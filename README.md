@@ -43,6 +43,14 @@ The Key feature of the project is that instead of referring to multiple websites
 9. Log into the page 
 10. Filter the universities based on your profile by giving GRE Score, TOEFL Score and CGPA
 11. You can also search the university by giving the university name in the search box.
+12. To take the backup of the database
+    1. Click on server > database export
+    2. Change the name of the backup
+    3. Click on start export
+13. To import the database
+    1. Click on server > database import
+    2. Select the path path where you created the backup
+    3. Click on start import
 
 
 
