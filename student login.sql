@@ -10,7 +10,7 @@ drop procedure if exists shortlist;
 delimiter $$
 create procedure shortlist(gre_in int, toefl_in int, cgpa_in float)
 begin
-	select u.University_Name University, u.University_Rating Rating, u.National_Rank "Rank", u.Tuition_Fees Tuition, s.Quality_of_Education as EducationQuality, s.Alumni_Employement Placements from university u join requirements r on u.University_ID=r.University_ID join standards s on s.University_ID=u.University_ID where (r.GRE between gre_in-3 and gre_in+3) and (r.TOEFL between toefl_in-3 and toefl_in+3) and (r.CGPA between cgpa_in-0.5 and cgpa_in+0.5);
+	select u.University_Name University, u.University_Rating Rating, u.National_Rank "Rank", u.Tuition_Fees Tuition, s.Quality_of_Education EducationQuality, s.Alumni_Employement Placements from university u join requirements r on u.University_ID=r.University_ID join standards s on s.University_ID=u.University_ID where (r.GRE between gre_in-3 and gre_in+3) and (r.TOEFL between toefl_in-3 and toefl_in+3) and (r.CGPA between cgpa_in-0.5 and cgpa_in+0.5);
 end$$
 delimiter ;
 
