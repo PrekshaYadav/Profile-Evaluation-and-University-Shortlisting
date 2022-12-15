@@ -125,8 +125,32 @@ SQL Query :
 <img width="256" alt="Query-15" src="https://user-images.githubusercontent.com/113796019/204119636-bedab2c2-7f1e-4c1c-8bed-e80d54fb5533.png">
 
 
+16. View the student name, contact_number and mail address who has Gre=310 and Toefl=99.
+SQL Query :
+
+        Select Name, Contact_Number, Email_ID
+        from student_profile
+        where GRE_Score = '310' AND TOEFL_Score = '99';
+
+![Class Diagram](images/usecase16.png)
+
+17. Show the student details and graduation year of students who has cgpa>8.
+SQL Query :
+
+        Select * from student_profile
+        where cgpa > '8';
+
+![Class Diagram](images/usecase17.png)
 
 
+18. Check for name, mail, GRE, cgpa, and Toefl score of students with age<26.
+SQL Query :
+
+        Select * from student_profile
+        where age< '26';
+
+
+![Class Diagram](images/usecase18.png) 
 
 # Previous Use Cases of each team member:
 
