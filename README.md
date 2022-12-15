@@ -13,7 +13,7 @@ Shreyasi Wakankar - 002771284
 
 Somesh Ramakanth Ramisetty - 002776372
 
-## Summary 
+## Overview 
 
 Being international students we are aware of the problem faced by the students while shortlisting and finalizing the University and hence in this project we’ll be creating a set of databases which will have a list of at least 100 universities along with the prerequisites of each course. 
 
