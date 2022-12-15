@@ -93,6 +93,24 @@ After cleaning and audting, the data is inserted into the respective tables usin
             Output :
             ![Class Diagram](images/procedure1.png)
 
+        2. Created procedure to get data based on the sudent profile.
+
+            This procedure is getting executed after clicking search button.
+            Output:    
+
+            ![Class Diagram](images/submit3.jpg)
+            ![Class Diagram](images/submit_button2.png)
+
+        3.  Created procedure to insert a user in the database after registration.
+
+            ![Class Diagram](images/reg1.png)
+            ![Class Diagram](images/reg2.png)
+            ![Class Diagram](images/reg3.png)
+
+        4. Created procedure to check if the user is already registered:
+            ![Class Diagram](images/reg4.png)
+           
+
     - Indexes
 
             -- Creating index
@@ -145,7 +163,7 @@ Performed visualization for the collected data. For visualization we have used S
     Represented number of university in various Countries.
     ![Class Diagram](images/Visualization/diag3.png)
 
-6) Prediction : Linear Regression
+7) Prediction : Linear Regression
 Performed linear regression to predict the chance of admit based on the given profile. Trained a model using 70% of the dataset available and then performed testing using the remaining dataset i.e 30%.
 ![Class Diagram](images/Visualization/YPredict.png)
 
@@ -155,7 +173,7 @@ Given a User profile the chance of admit predicted is :
 ![Class Diagram](images/Visualization/Prediction.png)
 
 
-7) Backup and Restore
+8) Backup and Restore
 We have also taken a backup of our database. So that in case of any causality we can restore it.
 ![Class Diagram](images/Backup-1.png)
 ![Class Diagram](images/Backup-2.png)
@@ -164,7 +182,7 @@ We have also taken a backup of our database. So that in case of any causality we
 ![Class Diagram](images/restore-2.png)
 ![Class Diagram](images/db_restored.png)
 
-8) User Interface:
+9) User Interface:
 User will first register in the website.
 ![Class Diagram](images/register.jpg)
 
@@ -179,6 +197,14 @@ Once the user logs in, he can seach for the universities based on his profile by
 User can also search the university by giving university name which will give all the details of the searched university.
 
 ![Class Diagram](images/serach3.jpg)
+
+
+10) Diagrams:
+
+![Class Diagram](images/diagram1.png)
+![Class Diagram](images/diagram2.png)
+
+
 
 
 
