@@ -1,0 +1,88 @@
+{% extends 'index.html' %}
+
+
+{% block main %}
+<h1 style="text-align: center;"><strong>University Shortlisting</strong></h1>
+
+<!-- requirements form for user -->
+<div id="shortlist">
+    <div>
+        <h3>Please fill out the Requirements</h3>
+        <div class="content"></div>
+        <form method="post" action="/shortlist">
+            GRE score:<br>
+            <input type="number" min="260" max="340" name="gre" id="gre" placeholder="GRE Score" style="width:130px;" required>
+            <br>
+            TOEFL score:<br>
+            <input type="number" min="0" max="120" name="toefl" id="toefl" placeholder="TOEFL score" style="width:130px;" required>
+            <br>
+            CGPA: <br>
+            <input type="number"  min="0" max="10.0" step="any" name="cgpa" id="cgpa" placeholder="cgpa" style="width:100px;" required>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- populate UI with DB response-->
+    <div class="table-wrapper">
+        <div class="title-row">
+            <div class="title">
+                <h3><b>University Details</b></h3>
+            </div>
+            <!--filter by name-->
+            <div class="add-new">
+                <input type="text" class="add-new" style="width: 19rem;" id="searchInput" onkeyup="filter()" placeholder="Search by University name...">
+            </div>
+        </div>
+
+        <table class="table table-bordered" id="table">
+                <thead>
+                    <tr>
+                        {% if data["header"] | length >0 %}
+                            {% for column in data["header"] %}
+                            <th>{{column}}</th>
+                            {% endfor %}
+                        {% else %}
+                        <th>--------NONE--------</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data["rows"] %}
+                    <tr>
+                        {% for cell in item %}
+                        <td>{{cell}}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+    </div>
+<script>
+    function filter() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table");
+            tr = table.getElementsByTagName("tr");
+
+            for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+                } else {
+                tr[i].style.display = "none";
+                }
+            }
+            }
+        }
+</script>
+<!-- </div>-->
+
+{% endblock %}
